@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* font-family: 'MuseoModerno', sans-serif; */
+
+:root {
+  --for-dark-color: #007FFF;
+  --lite-dark-color: #11151A;
+  --lite-blue-color:#2F81F7;
+  --lite-bluissh-body-background-color:#E6E6FA;
+  --yellow-color:#f5ba13;
+  --darkish-blue-backgound:#0F152B;
+  --blue-color-for-button:#3C46FF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Mulish', sans-serif;
+}
+.navbar{
+  background-color: #FFFFFF !important;
+}
+.navbar-brand{
+  font-size: 1.3rem !important;
+  color: #565387;
+}
+.navbar a{
+  font-size: 1.05rem;
+  text-transform: capitalize;
+}
+.navbar a:hover{
+  color: #3498db !important;
+}
+
+.menu_active{
+  border-bottom:1px solid #565387  ;
+  font-weight: bold ;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------Main HomePage---------------------------------- */
+#header{
+  width: 100%;
+  height: 80vh;
+  margin-top: 60px;
+}
+#header h1{
+  margin: 0 0 10px 0;
+  font-size: 42px;
+  font-weight: 600;
+  color: black;
+}
+#header .brand-name{
+  color: #407BFF;
+
+}
+#header h2{
+  color: #484848;
+  font-size: 22px;
+}
+#header .btn-get-started{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.4s;
+  color: #407BFF;
+  border: 2px solid #3498db;
+  text-decoration: none;
+}
+#header .btn-get-started:hover{
+  background: #3498db;
+  color: white;
+}
+#header .animated{
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down{
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down{
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =================================================================================================
+ */
+
+@media(max-width:991px){
+  #header{
+    height: 80vh;
+    text-align: center;
+  }
+  #header .header-img{
+    text-align: center;
+  }
+  #header .header-img img{
+    width: 60%;
+  }
+}
+
+@media(max-width:768px){
+  #header{
+    margin-top: 20px;
+  }
+  #header h1{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  #header .header-img img{
+    width: 70%;
+  }
 }
